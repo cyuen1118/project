@@ -4,10 +4,7 @@
 
 def insert(heap, value):
     heap.append(value)
-
     index = len(heap) - 1
-
-
     while index > 0 and heap[(index - 1) // 2] > heap[index]:
         heap[index], heap[(index - 1) // 2] = heap[(index - 1) // 2], heap[index]
 
@@ -20,14 +17,11 @@ def deleteMin(heap, value):
         if heap[i] == value:
             index = i
             break
-
     if index == -1:
         return
 
     heap[index] = heap[-1]
-
     heap.pop()
-
 
     while True:
         left_child = 2 * index + 1
@@ -38,13 +32,11 @@ def deleteMin(heap, value):
             smallest = left_child
         if right_child < len(heap) and heap[right_child] < heap[smallest]:
             smallest = right_child
-
         if smallest != index:
             heap[index], heap[smallest] = heap[smallest], heap[index]
             index = smallest
         else:
             break
-
 
 if __name__ == "__main__":
     arr = []

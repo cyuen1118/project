@@ -7,7 +7,6 @@ def insert(heap, value):
     index = len(heap) - 1
     while index > 0 and heap[(index - 1) // 2] > heap[index]:
         heap[index], heap[(index - 1) // 2] = heap[(index - 1) // 2], heap[index]
-
         index = (index - 1) // 2
 
 

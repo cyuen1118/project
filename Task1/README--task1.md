@@ -8,7 +8,9 @@ Flight management system
 
 Description:
 
-This project provide the three module for better managing the flight information. The passenger stores all passenger details, the flight store information like origin and destination. The airline.py allow user add or remove flight from the system. The system helps to simplify airline data management and provide a modular structure for handling passengers and flights. It helps user adding passenger information into the data system.
+For my Flight Management System project, I developed four modules. Each module has applied different OOP concept such as aggregation, polymorphism and abstraction. It stores the flights/ International flight, passengers, and airline related details with encapsulation. The passenger stores all passenger details and the flight store its flight information like origin and destination. The airline.py allow user add or remove flight from the system and store its related information. The airline class’s core function is to represent an airline name and managing a list of flights. The International_flight class is similar with the flight class, which it used to store the International flight information.
+
+The system helps to simplify airline data management and provide a modular structure for handling passengers and flights. It helps user easily adding passenger information into the data system.
 
 Installation instructions:
 
@@ -16,7 +18,7 @@ The program require install PyQt5 with inputting "pip install PyQt5" in the term
 
 Usage:
 
-Run the main.py file and filled with requried information (e.g Passenger name, Passenger number, Age, Gender). Then the user could click the "Add Passenger" button to update passenger information.
+Run the main.py file and filled with requried information (e.g Passenger name, Passenger number, Age, Gender, flight type). Then the user could click the "Add Passenger" button to update passenger information. 
 
 Features
 

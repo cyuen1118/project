@@ -46,4 +46,12 @@ class Flight:
     def display_flight(self):
         return f"Flight no: {self._flight_number}, origin: {self._origin}, destination: {self._destination}, capacity: {self._capacity}"
 
+class Local_Flight(Flight):
+    def __init__(self, flight_number, origin, destination, capacity):
+        super().__init__(flight_number, origin, destination, capacity)
+    
+    def display_flight(self):
+        return f"Flight no: {self._flight_number}, origin: {self._origin}, destination: {self._destination}, capacity: {self._capacity}"
+
+
 

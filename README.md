@@ -6,13 +6,11 @@ Project Title & Logo
 Flight management system
 
 Description:
-
 For my Flight Management System project, I developed four modules. Each module has applied different OOP concept such as aggregation, polymorphism and abstraction. It stores the flights/ International flight, passengers, and airline related details with encapsulation. The passenger stores all passenger details and the flight store its flight information like origin and destination. The airline.py allow user add or remove flight from the system and store its related information. The airline class’s core function is to represent an airline name and managing a list of flights. The International_flight class is similar with the flight class, which it used to store the International flight information.
 
 The system helps to simplify airline data management and provide a modular structure for handling passengers and flights. It helps user easily adding passenger information into the data system.
 
 Installation instructions:
-
 The program require install PyQt5 with inputting "pip install PyQt5" in the terminal.
 
 
@@ -50,17 +48,14 @@ Heap could be min-heap or max heap. For the min-heap, it is a complete binary tr
 There are some common operation on a Heap Data Structure:
 
 Insertion:
-
 In the insertion, the inserted value added into the end of list of heap. Then calculate the child index number and use the child in the heap list compare with parent nodes. The code is implementing the min heap, where if the parent is larger than child. The parent node and child node needed to be switched. After that, the new index will become number to retrieve the parent node and continue the while loop for comparison.  
 
 For example, I began with a list of values and inserted them sequentially into the heap array using the insertion procedure. For example, I have a list [31, 41, 51, 100]. When I insert a new number 13, the array looks like [31, 41, 51, 100, 13] before the swap executed. The parent of 13 is 41, which is larger than the child 13 and a swap occurs. The new list becomes [31, 13, 51, 100, 41]. Because 13 is still smaller than its new parent 31. The swaps will be executed and the new result is [13, 31, 51, 100, 41]. If there’s another element 16 inserted. The list is [13, 31, 51, 100, 41, 16]. The 51 is the parent node of 16, and it is larger than child node. It needed to swaps and the list becomes [13, 31, 16, 100, 41, 51]. In this structure, 31 and 16 are children of 13; 100 and 41 are children of 31; and 51 is the child of 16.
 
 Deletion:
-
 In delete function, the first step is to find the index of the value to delete with the for loop. Then verify whether the value exist in the heap and return the function if the target is not in the list. The heap[index] = heap[-1] is replacing the target element with last element from the list and heap.pop() is to remove the last element. After replacing the last element, the Min-Heap property might not be fulfilled since the minimum node need to be the root. It needed to perform heapify starting from the root to restore the heap property. If right/left child to smaller than the parent node, it needed to perform the swap. For example, if smallest != index: condition is to ensure the situation where the child need to be always smaller, through executing the swap and continue the comparison. 
 
 Peek:
-
 Top is the function to retrieve the root element with O(1). In min-heap, it will return the smallest value. 
 Heapsort:
 
@@ -71,16 +66,14 @@ The implementation of Heap Sort begins by constructing a max‑heap from the inp
 Application:
 
 Heap:
-
-min-heap is used to implement priority queues, where the smallest element is always retrieve first. Heap Sort:
-
+min-heap is used to implement priority queues, where the smallest element is always retrieve first. 
+Heap Sort:
 Heap sort is used on largest dataset handling, where the memory usage could be minimized.
 
 
 
 User Guide (how to run your Python code):
 For MinHeap, user could change the value inside of the arr list, inserted value and delete value for building or managing the new heap. After changing the value, the user can execute the MinHeap.py file. 
-
 For heapsort, user could change the value inside of the arr list and the run the heapsort.py file.
 
 

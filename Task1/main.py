@@ -1,13 +1,9 @@
-
-
-
-
-
 from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QPushButton, QVBoxLayout, QLineEdit
 import sys
 from passenger import Passenger
-from flight import Flight
+from flight import Flight, Local_Flight
 from airline import Airline
+from International_flight import International_flight, I_flight
 
 def main():
     app = QApplication(sys.argv)
@@ -15,10 +11,15 @@ def main():
     window.setWindowTitle("Flight Management System")
 
     airline = Airline("AB Airways")
-    flight1 = Flight("AB123", "Hong Kong", "Tokyo", 10)
-    airline.add_flight(flight1)
+    domestic = Local_Flight("AB123", "Tokyo", "Sapporo", 10)
+    international = I_flight("AB156", "Hong Kong", "Tokyo", 10)
 
-    label = QLabel("Welcome to Flight Management System")
+    flights = [domestic, international]
+    for f in flights:
+        airline.add_flight(f)
+
+    flight_numbers = [f.get_flight_number() for f in airline.get_flight()]
+    label = QLabel("Flights:\n" + "\n".join(flight_numbers))
 
     name_input = QLineEdit()
     name_input.setPlaceholderText("Passenger name")
@@ -49,13 +50,20 @@ def main():
             return
 
         p = Passenger(name, passport, age, gender)
-        flight1.add_passenger(p)
+        
+        p.set_name(name)
+        p.set_passport_number(passport)
+        p.set_age(age_text)
+        p.set_sex(gender)
+        domestic.add_passenger(p)
 
-        lines = [airline.display_airline(), flight1.display_flight()]
-        for passenger in flight1.get_passengers():
-            lines.append(passenger.display_passenger())
+        lines = [airline.display_airline()]
+        for f in airline.get_flight():
+            lines.append(f.display_flight())
+            for passenger in f.get_passengers():
+                lines.append(passenger.display_passenger())
+
         text = "\n".join(lines)
-
         label.setText(text)
 
         name_input.clear()
@@ -80,5 +88,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-

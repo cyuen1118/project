@@ -3,11 +3,9 @@
 
 
 
-
 def insert(heap, value):
     heap.append(value)
     index = len(heap) - 1
-    print(heap)
     while index > 0 and heap[(index - 1) // 2] > heap[index]:
         heap[index], heap[(index - 1) // 2] = heap[(index - 1) // 2], heap[index]
         index = (index - 1) // 2
@@ -23,7 +21,6 @@ def deleteMin(heap, value):
         return
 
     heap[index] = heap[-1]
-    print("Heap before delete: ",heap)
     heap.pop()
 
     while True:

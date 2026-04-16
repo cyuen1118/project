@@ -15,6 +15,8 @@ Installation instructions:
 
 The program require install PyQt5 with inputting "pip install PyQt5" in the terminal.
 
+
+
 User Guide (how to run your Python code):
 
 Run the main.py file with PyQt5 and filled with requried information (e.g Passenger name, Passenger number, Age, Gender, flight type). Then the user could click the "Add Passenger" button to update passenger information.
@@ -73,6 +75,7 @@ Heap:
 min-heap is used to implement priority queues, where the smallest element is always retrieve first. Heap Sort:
 
 Heap sort is used on largest dataset handling, where the memory usage could be minimized.
+
 
 
 User Guide (how to run your Python code):

@@ -19,6 +19,12 @@ Usage:
 
 Run the main.py file and filled with requried information (e.g Passenger name, Passenger number, Age, Gender, flight type). Then the user could click the "Add Passenger" button to update passenger information.
 
+Flight added with domestic flight:
+<img width="310" height="193" alt="image" src="https://github.com/user-attachments/assets/5ff07132-d01f-4f31-bea5-d42f3e1f8322" />
+Flight added with International flight:
+<img width="297" height="192" alt="image" src="https://github.com/user-attachments/assets/c7ab96d9-a01a-46f7-a063-6475e6f777a1" />
+
+
 Features
 
 Built with GUI: Flight management system have the GUI and allow the user to add new passenger information. Passenger Management: The program allow user add new passenger for the flight. The passenger information will store until the passenger number reached the maximum number.

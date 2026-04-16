@@ -9,7 +9,8 @@ Flight management system
 
 Description:
 
-This project provide the three module for better managing the flight information. The passenger stores all passenger details, the flight store information like origin and destination. The airline.py allow user add or remove flight from the system. The system helps to simplify airline data management and provide a modular structure for handling passengers and flights. It helps user adding passenger information into the data system.
+For my Flight Management System project, I developed four modules. Each module has applied different OOP concept and store the flights, passengers, and airline related details.
+The passenger stores all passenger details, the flight store information like origin and destination. The airline.py allow user add or remove flight from the system. The The system helps to simplify airline data management and provide a modular structure for handling passengers and flights. It helps user adding passenger information into the data system. 
 
 Installation instructions:
 
@@ -30,16 +31,17 @@ Description:
 I selected the heap as my data structure and heap sort as my algorithm. The min-heap helps the program efficiently manage and retrieve data, while heap sort provides effective data retrieval with optimal time complexity and minimal memory usage.
 
 Abstract Data Type (ADT) Definition
+Abstract Data Type (ADT) is a conceptual model. They define what a data structure does without dictating how it does it. 
 
-Heap could be min-heap or max heap. For the min-heap, it is a complete binary tree. The value of the root node must be the smallest among all its descendant nodes and the same thing must be done for its left and right sub-tree(parent ≤ children).
+Heap could be min-heap or max heap. For the min-heap, it is a complete binary tree. The value of the root node must be the smallest among all its descendant nodes and the same thing must be done for its left and right sub-tree(parent ≤ children). Max heap is a binary tree data structure where the parent node is always greater than or equal to its children, ensuring the largest element at the root. The time complexity of largest element in the max-heap or smallest element in the min heap is the O(1). The difference between min-heap and max-heap is min-heap’s minimum key element present at the root while the max-heap’s maximum key element present at the root. A min-heap uses the ascending priority and max-heap uses the descending priority. 
 
 There are some common operation on a Heap Data Structure:
 
 Insertion:
 
-Add the new element to the end of the heap, in the next available position in the last level of the tree. Compare the new element with its parent. If the parent is greater than the new element, swap them. repeat step 2 until the parent is smaller than or equal to the new element,or until the new element reaches the root of the tree. Deletion:
+In the insertion, the inserted value added into the end of list of heap. Then calculate the child index number and use the child in the heap list compare with parent nodes. The code is implementing the min heap, where if the parent is larger than child. The parent node and child node needed to be switched. After that, the new index will become number to retrieve the parent node and continue the while loop for comparison.  
 
-Replace the root with the last element in the heap Remove the last element from the heap, since it has been moved to the root. Heap-down: The element now at the root may violate the Min-Heap property, so perform heapify starting from the root to restore the heap property. For the heap sort, it is a comparison-based sorting algorithm based on the Binary Heap data structure. The algorithm repeatedly finds the maximum (or minimum) element and swaps it with the last (or first) element. To execute the heap sort, the algorithm will first visualize the array as a complete binary tree. Then it will build a Max Heap and sort the array by placing largest element at end of unsorted array.
+For example, I began with a list of values and inserted them sequentially into the heap array using the insertion procedure. For example, I have a list [31, 41, 51, 100]. When I insert a new number 13, the array looks like [31, 41, 51, 100, 13] before the swap executed. The parent of 13 is 41, which is larger than the child 13 and a swap occurs. The new list becomes [31, 13, 51, 100, 41]. Because 13 is still smaller than its new parent 31. The swaps will be executed and the new result is [13, 31, 51, 100, 41]. If there’s another element 16 inserted. The list is [13, 31, 51, 100, 41, 16]. The 51 is the parent node of 16, and it is larger than child node. It needed to swaps and the list becomes [13, 31, 16, 100, 41, 51]. In this structure, 31 and 16 are children of 13; 100 and 41 are children of 31; and 51 is the child of 16.
 
 Application:
 

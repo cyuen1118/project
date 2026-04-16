@@ -52,6 +52,14 @@ In the insertion, the inserted value added into the end of list of heap. Then ca
 
 For example, I began with a list of values and inserted them sequentially into the heap array using the insertion procedure. For example, I have a list [31, 41, 51, 100]. When I insert a new number 13, the array looks like [31, 41, 51, 100, 13] before the swap executed. The parent of 13 is 41, which is larger than the child 13 and a swap occurs. The new list becomes [31, 13, 51, 100, 41]. Because 13 is still smaller than its new parent 31. The swaps will be executed and the new result is [13, 31, 51, 100, 41]. If there’s another element 16 inserted. The list is [13, 31, 51, 100, 41, 16]. The 51 is the parent node of 16, and it is larger than child node. It needed to swaps and the list becomes [13, 31, 16, 100, 41, 51]. In this structure, 31 and 16 are children of 13; 100 and 41 are children of 31; and 51 is the child of 16.
 
+Deletion:
+
+In delete function, the first step is to find the index of the value to delete with the for loop. Then verify whether the value exist in the heap and return the function if the target is not in the list. The heap[index] = heap[-1] is replacing the target element with last element from the list and heap.pop() is to remove the last element. After replacing the last element, the Min-Heap property might not be fulfilled since the minimum node need to be the root. It needed to perform heapify starting from the root to restore the heap property. If right/left child to smaller than the parent node, it needed to perform the swap. For example, if smallest != index: condition is to ensure the situation where the child need to be always smaller, through executing the swap and continue the comparison. 
+
+Peek:
+
+Top is the function to retrieve the root element with O(1). In min-heap, it will return the smallest value. 
+
 Application:
 
 Heap:

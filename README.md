@@ -75,7 +75,9 @@ Heap sort is used on largest dataset handling, where the memory usage could be m
 
 
 Heap after the Insertion (13) for the list [13,31,16,100,41,51]:
+
 <img width="290" height="289" alt="image" src="https://github.com/user-attachments/assets/c88d77fe-7722-48b5-a882-d5e579400f42" />
 
 Heap after deletion (13) for the list [16, 31, 51, 100, 41]:
+
 <img width="305" height="342" alt="image" src="https://github.com/user-attachments/assets/acd0368d-f3df-4fea-a681-a4ef772f9146" />

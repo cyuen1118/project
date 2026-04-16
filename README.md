@@ -40,7 +40,7 @@ Description:
 I selected the heap as my data structure and heap sort as my algorithm. The min-heap helps the program efficiently manage and retrieve data, while heap sort provides effective data retrieval with optimal time complexity and minimal memory usage.
 
 Abstract Data Type (ADT) Definition
-Abstract Data Type (ADT) is a conceptual model. They define what a data structure does without dictating how it does it. 
+Abstract Data Type (ADT) is a conceptual model. They define what a data structure does without dictating how it does it. The heap data structure is a list of element, and it has the Insert() ,DeleteMin() and top() function to manage or retrieve the list of elements. 
 
 Heap could be min-heap or max heap. For the min-heap, it is a complete binary tree. The value of the root node must be the smallest among all its descendant nodes and the same thing must be done for its left and right sub-tree(parent ≤ children). Max heap is a binary tree data structure where the parent node is always greater than or equal to its children, ensuring the largest element at the root. The time complexity of largest element in the max-heap or smallest element in the min heap is the O(1). The difference between min-heap and max-heap is min-heap’s minimum key element present at the root while the max-heap’s maximum key element present at the root. A min-heap uses the ascending priority and max-heap uses the descending priority. 
 
@@ -59,6 +59,11 @@ In delete function, the first step is to find the index of the value to delete w
 Peek:
 
 Top is the function to retrieve the root element with O(1). In min-heap, it will return the smallest value. 
+Heapsort:
+
+For the heap sort, it is a comparison-based sorting algorithm based on the Binary Heap data structure. The algorithm repeatedly finds the maximum (or minimum) element and swaps it with the last (or first) element. The process is repeated for the remaining elements until the array is sorted. 
+
+The implementation of Heap Sort begins by constructing a max‑heap from the input array. For example, given the array [ 9 , 4 , 3 , 8 , 10 , 2 , 5 ] , the length of the list, n is 7, and find the non-leaf node to execute the heapify function until it reaches the root. After the first heapify, 3 is smaller than its child 5, therefore the switched is needed and the list becomes [9, 4, 5, 8, 10, 2, 3]. The heapify function will continue until the root and the list becomes [ 10 , 9 , 5 , 8 , 4 , 2 , 3 ]. The second for loop under the heapsort is to extract the element and switched the element with the first element. This can ensure the element at the root is the largest. In the first iteration in the for loop, the root element 10 is swapped with the last element 3, producing [ 3 , 9 , 5 , 8 , 4 , 2 , 10 ] . Then call the heapify(arr, 6, 0) and compared the child node with parent node 3. Since parent node 3 is smaller than the left child(arr[1]) 9, the switched is needed. After that, there will be another recursive heapify function for the child node to ensure the heap order. This process continues across iterations, progressively moving the largest element to the end of the array while reducing the heap size. After all iterations are complete, the array is fully sorted in ascending order: [ 2 , 3 , 4 , 5 , 8 , 9 , 10 ].
 
 Application:
 
@@ -67,3 +72,10 @@ Heap:
 min-heap is used to implement priority queues, where the smallest element is always retrieve first. Heap Sort:
 
 Heap sort is used on largest dataset handling, where the memory usage could be minimized.
+
+
+Heap after the Insertion (13) for the list [13,31,16,100,41,51]:
+<img width="290" height="289" alt="image" src="https://github.com/user-attachments/assets/c88d77fe-7722-48b5-a882-d5e579400f42" />
+
+Heap after deletion (13) for the list [16, 31, 51, 100, 41]:
+<img width="305" height="342" alt="image" src="https://github.com/user-attachments/assets/acd0368d-f3df-4fea-a681-a4ef772f9146" />
